@@ -1,0 +1,55 @@
+name: 'Build App'
+description: 'Build from TS source'
+inputs:
+   GITHUB_TOKEN:
+      description: 'GITHUB_TOKEN'
+      required: true
+   OUT_DIR:
+      description: 'OUT_DIR'
+      required: false
+   SRC_DIR:
+      description: 'SRC_DIR'
+      required: false
+   TS_PROJECT:
+      description: 'TS_PROJECT'
+      required: false
+   GIT_CONFIG_USER_NAME:
+      description: 'git config user.name'
+      required: false
+   GIT_CONFIG_USER_MAIL:
+      description: 'git config user.email'
+      required: false
+   GITHUB_SHA:
+      description: 'GITHUB_SHA'
+      required: false
+   GITHUB_ACTOR:
+      description: 'GITHUB_ACTOR'
+      required: false
+   GITHUB_REPOSITORY:
+      description: 'GITHUB_REPOSITORY'
+      required: false
+   NPM_AUTH_TOKEN:
+      description: 'npm auth token'
+      required: false
+   NPM_CONFIG_USERCONFIG:
+      description: '.npmrc Directory containing the .npmrc file'
+      required: false
+   NPM_CUSTOM_NPMRC:
+      description: '.npmrc file content'
+      required: false
+   NPM_REGISTRY_URL:
+      description: 'URL for NPM registry'
+      required: false
+   NPM_STRICT_SSL:
+      description: 'true/false for requiring strict SSL'
+      required: false
+
+outputs:
+   content:
+      description: 'The output of the task'
+
+runs:
+   using: docker
+   image: Dockerfile
+
+
